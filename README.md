@@ -1,5 +1,5 @@
 ## ProDark-FreeCAD-theme
-FreeCAD Dark theme  with 4k monitor small font fix (defaults to 10) but can be chaged in InitGui.py with editor.
+FreeCAD Dark theme  with 4k monitor small font fix (defaults to 10) but can be changed in InitGui.py with editor.
 
 ## Installation
 # On Windows 10
