@@ -1,17 +1,17 @@
-## ProDark-FreeCAD-theme
+# ProDark-FreeCAD-theme
 FreeCAD Dark theme  with 4k monitor small font fix (defaults to 10) but can be changed in InitGui.py with editor.
 
-## Installation
-# On Windows 10
+# Installation
+## On Windows 10
 Install ProDark.qss into FreeCAD Folder\data\Gui\Stylesheets\ 
 Install HighRezMonitor Folder with InitGui.py into C:\Users\UserName\AppData\Roaming\FreeCAD\Mod\
 In FreeCAD go to Edit/Preferences/General and pick ProDark from Stylesheet, Change Size of toolbar icons: to Medium(24px) and Apply/Ok
 To have Startpage the same as Screenshots, choose same colors as screenshots in User Preferences
 
-## Discussion
+# Discussion
 Feel free to discuss this addon on its [New ProDark Theme with 4k small text Mod](https://forum.freecadweb.org/viewtopic.php?f=34&t=55134&start=0)
 
-## Screenshots
+# Screenshots
 Right Click/View Image too see in 2K
 
 <img src="images/Working_plane_and_color_setup.png">
