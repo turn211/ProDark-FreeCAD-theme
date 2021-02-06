@@ -8,6 +8,8 @@ Install ProDark.qss into FreeCAD Folder\data\Gui\Stylesheets\ and HighRezMonitor
 ## Discussion
 Feel free to discuss this addon on its [New ProDark Theme with 4k small text Mod](https://forum.freecadweb.org/viewtopic.php?f=34&t=55134&start=0)
 
+## Screenshots
+
 Right Click/View Image too see in 2K
 
 <img src="images/Working_plane_and_color_setup.png">
