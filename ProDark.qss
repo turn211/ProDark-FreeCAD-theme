@@ -517,7 +517,7 @@ QTabWidget::tab-bar:right {
 
 QTabBar {
     qproperty-drawBase: 0; /* important */
-    background-color: transparent;
+    background-color: #333333; /* Hack for Undocked white background - was transparent*/ 
 }
 
 /* Workaround for QTabBars created from docked QDockWidgets which don't draw the border if not set and reset as follows: */
@@ -533,7 +533,7 @@ QDialog QTabBar {
 /* end fix */
 
 QTabBar::tab {
-    background-color: transparent;
+    background-color: #3c3c3c; /* was transparent */
     border: 1px solid transparent;
     padding: 3px;
 }
@@ -588,7 +588,7 @@ QTabBar::tab:!selected {
 
 QTabBar::tab:!selected:hover {
     color: rgba(255,255,255,180);
-    background-color: rgba(255,255,255,20);
+    background-color: rgba(255,255,255,20); /* Hack for Undocked inactive tabs - can also change to #696969 */
 }
 
 QTabBar::tab:first:selected {
@@ -1033,9 +1033,9 @@ QPlainTextEdit:focus {
     background-color: #3C3C3C; /* Python Console */
     selection-color: #cbd8e6;
     selection-background-color: #696969;
-    border: 1px solid #333333;
+    border: 4px solid #333333;
     border-radius: 2px;
-    margin: 4px;
+    margin: 0px;
 }
 
 
