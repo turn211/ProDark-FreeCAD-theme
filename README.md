@@ -22,4 +22,4 @@ Right Click/View Image too see in 2K
 <img src="images/4K_Text_size_MOD.png">
 
 ## License
-GPL v3.0 (see [LICENSE](LICENSE))
+CC0 1.0 Universal (see [LICENSE](LICENSE))
