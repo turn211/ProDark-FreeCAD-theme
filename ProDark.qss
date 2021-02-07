@@ -737,7 +737,7 @@ QTreeView,
 QListView,
 QTableView {
     color: #e0e0e0;
-    background-color: #3c3c3c;
+    background-color: #3c3c3c; /*Also controls Default Spreadsheet background  */
     alternate-background-color: #333333; /* related with QListView background  */
     border: 1px solid #333333;
     selection-color: #ffffff;
@@ -1030,7 +1030,7 @@ Text/Python editor (macros, etc...)
 ==================================================================================================*/
 QPlainTextEdit,
 QPlainTextEdit:focus {
-    background-color: #3C3C3C;
+    background-color: #3C3C3C; /* Python Console */
     selection-color: #cbd8e6;
     selection-background-color: #696969;
     border: 1px solid #333333;
@@ -1188,7 +1188,7 @@ QDateTimeEdit {
 
 /* more contrast for QTextEdits */
 QTextEdit {
-    color: black;
+    color: #ffffff; /* Addon Manager*/
 }
 
 /* shifts text/number editable field to the left to make space for the up/down or drop-down buttons */
@@ -1436,7 +1436,7 @@ Push button
 QPushButton {
     color: #e0e0e0;
     text-align: center;
-    background-color: qlineargradient(spread:pad, x1:0, y1:0.3, x2:0, y2:1, stop:0 #3c3c3c, stop:1 #3c3c3c);
+    background-color: qlineargradient(spread:pad, x1:0, y1:0.3, x2:0, y2:1, stop:0 #3c3c3c, stop:1 #3c3c3c); /* Middle Mouse Navigation Button and Ok Cancel Apply Help Preferences Buttons */
     border: 1px solid #2a2a2a;
     border-bottom-color: #3c3c3c; /* simulates shadow under the button */
     padding: 4px 22px;
@@ -2022,7 +2022,8 @@ Tables (spreadsheets)
 QTableView {
     gridline-color: #a0a0a0;
     selection-color: #1a72be;
-    selection-background-color: #adc5ed;
+    selection-background-color: #9ddbff; /* Default Spreadsheet cell selection background color */
+    background-color: #ffffff; /* Default Spreadsheet cell background color */
 }
 
 QTableView::item:hover  {
