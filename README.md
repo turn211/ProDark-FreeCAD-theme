@@ -9,7 +9,7 @@ FreeCAD Dark theme  with 4k monitor small font fix (defaults to 10) but can be c
 4. To have Startpage the same as Screenshots, choose same colors as screenshots in User Preferences
 
 # Discussion
-Feel free to discuss this addon on its [New ProDark Theme with 4k small text Mod](https://forum.freecadweb.org/viewtopic.php?f=34&t=55134&start=0)
+Feel free to discuss this theme and addon on its [New ProDark Theme with 4k small text Mod](https://forum.freecadweb.org/viewtopic.php?f=34&t=55134&start=0)
 
 # Screenshots
 Right Click/View Image too see in 2K
