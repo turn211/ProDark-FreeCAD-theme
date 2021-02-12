@@ -1,10 +1,14 @@
 /*
 ABOUT
 ============================================================================================================
-version 2.22
-Qt theme (stylesheet) specially developed for FreeCAD (https://www.freecadweb.org/).
-It might work with other software that uses Qt styling.
+ProDark
+A Professional Dark Mode FreeCAD Theme by Thomas Plank aka turn211
+based on the stock theme from FreeCAD by Pablo Gil Fernández
 
+KNOWN BUGS and TO DO
+============================================================================================================
+Please, follow the link to get updated information: 
+https://forum.freecadweb.org/viewtopic.php?f=34&t=55134&sid=0466734fc3349eccd8921eb356f70ad7
 
 LICENSE
 ============================================================================================================
@@ -13,7 +17,6 @@ Copyright (c) 2019 Pablo Gil Fernández
 This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 
-
 INSTALLATION
 ============================================================================================================
 1) Place the .qss files and /images/ folder in the path that fits your OS:
@@ -21,10 +24,7 @@ INSTALLATION
     WINDOWS = C:/[INSTALLATION_PATH]/FreeCAD/data/Gui/Stylesheets/
     LINUX = /home/[YOUR_USER_NAME]/.FreeCAD/Gui/Stylesheets/
 
-
-CUSTOMIZATION
-============================================================================================================
-If you would like to change the overall look/style of the theme, just find and replace following colors in the whole file:
+============================================================================================================  
     BACKGROUND (darker to lighter)
         black
         #1e1e1e
@@ -34,7 +34,6 @@ If you would like to change the overall look/style of the theme, just find and r
         #3c3c3c
         #333333 = main background color
         #3c3c3c = secondary
-        #3C3C3C
         #a0a0a0
         #b4b4b4
         #bebebe
@@ -50,15 +49,8 @@ If you would like to change the overall look/style of the theme, just find and r
         #3874f2
         #557BB6 = main selection color
         #557BB6 = used to build QSpinBox up and down buttons, it's used as color in the middle
-        #557BB6
         #adc5ed
         #cbd8e6
-
-
-KNOWN BUGS and TO DO
-============================================================================================================
-Please, follow the link to get updated information: https://forum.freecadweb.org/viewtopic.php?f=10&t=12417
-
 */
 
 
@@ -124,7 +116,7 @@ QToolBox::tab
 {
 	background-color: #2a2a2a;
 	border: 2x solid #3c3c3c;
-    border-radius: 2px;
+    	border-radius: 2px;
 }
 
 
@@ -132,7 +124,7 @@ QToolBox::tab:hover
 {
 	background-color: #557BB6;
 	border: 1px solid #6492d7;
-    border-radius: 1px
+    	border-radius: 1px
 }
 
 /*==================================================================================================
