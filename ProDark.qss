@@ -305,6 +305,7 @@ QDockWidget {
     color: #a0a0a0;
     titlebar-close-icon: url(qss:images_dark-light/close_light.svg);
     titlebar-normal-icon: url(qss:images_dark-light/undock_light.svg);
+    background-color: #333333;
 }
 
 QDockWidget::title {
@@ -640,7 +641,7 @@ QDialog#Gui__Dialog__DlgPreferences > QListView::item {
 }
 
 QDialog#Gui__Dialog__DlgPreferences > QListView::item:hover {
-    background-color: #3C3C3C;
+    background-color: #557BB6;
 }
 
 QDialog#Gui__Dialog__DlgPreferences > QListView::item:selected {
@@ -1455,27 +1456,28 @@ Push button
 QPushButton {
     color: #e0e0e0;
     text-align: center;
-    background-color: #696969; /* Middle Mouse Navigation Button and Ok Cancel Apply Help Preferences Buttons */
-    border: 2px #d3d3d3;
-    padding: 4px 12px;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0.3, x2:0, y2:1, stop:0 #696969, stop:1 #696961); /* Middle Mouse Navigation Button and Ok Cancel Apply Help Preferences Buttons */
+    border: 2px;
+    border-color: #2a2a2a;
+    padding: 4px 20px;
     margin: 2px 2px;
     min-height: 20px; /* same as QTabBar QPushButton min-width */
     border-radius: 2px;
-    min-width: 8px;
+
 }
 
 QPushButton:hover,
 QPushButton:focus {
     color: #cbd8e6;
-    border-color: #557BB6;
+    border-color: #2a2a2a;
     background-color: #557BB6;
 }
 
 QPushButton:disabled,
 QPushButton:disabled:checked {
     color: #2a2a2a;
-    background-color: #3c3c3c; /* same as enabled color */
-    border-color: #3c3c3c; /* same as enabled color */
+    background-color: #696969; /* same as enabled color */
+    border-color: #2a2a2a; /* same as enabled color */
 }
 
 QPushButton:pressed {
@@ -1508,11 +1510,12 @@ Gui--ColorButton:disabled {
 Gui--ColorButton:hover,
 Gui--ColorButton:focus {
     border-color: #557BB6;
-    background-color: #557BB6;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #557BB6, stop:1 #557BB6);
 }
 
 Gui--ColorButton:pressed {
-    background-color: #557BB6;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #557BB6, stop:1 #557BB6);
+
 }
 
 /* Pushbutton style for "..." inside Placement cell which launches Placement tool */
@@ -2040,10 +2043,10 @@ QToolBar QToolButton#qt_toolbar_ext_button:on {
 Tables (spreadsheets)
 ==================================================================================================*/
 QTableView {
-    gridline-color: #a0a0a0;
-    selection-color: #557BB6;
-    selection-background-color: #9ddbff; /* Default Spreadsheet cell selection background color */
-    background-color: #ffffff; /* Default Spreadsheet cell background color */
+    gridline-color: #696969;
+    selection-color: #ffffff;
+    selection-background-color: #2D5C9A; /* Default Spreadsheet cell selection background color */
+    background-color: #a0a0a0; /* Default Spreadsheet cell background color */
 }
 
 QTableView::item:hover  {
@@ -2051,11 +2054,11 @@ QTableView::item:hover  {
 }
 
 QTableView::item:disabled  {
-    color: #333333;
+    color: #eeeeee;
 }
 
 QTableView::item:selected  {
-    color: #557BB6;
+    color: #a0a0a0;
     border-color: #cbd8e6; /* same as focused background color */
     border-bottom-color: #557BB6; /* same as focused border color */
 }
@@ -2127,9 +2130,9 @@ QTableView > QWidget > QTextEdit:focus,
 QTableView > QWidget > QTimeEdit:focus,
 QTableView > QWidget > QDateEdit:focus,
 QTableView > QWidget > QDateTimeEdit:focus {
-    color: #557BB6;
+    color: #2a2a2a;
     selection-color: white;
-    selection-background-color: #696969;
+    selection-background-color: #557BB6;
     border-color: #cbd8e6;
     background-color: #cbd8e6;
 }
