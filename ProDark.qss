@@ -1194,7 +1194,7 @@ QDateEdit,
 QDateTimeEdit {
     color: #f5f5f5;
     background-color: #696969;
-    selection-color: #000000;
+    selection-color: #ffffff;
     selection-background-color: #557BB6;
     border: 0px solid #2a2a2a;
     border-radius: 2px;
