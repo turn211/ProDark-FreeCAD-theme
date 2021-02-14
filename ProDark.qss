@@ -346,7 +346,8 @@ QDockWidget::float-button:pressed {
 /* fix for Python Console (probably there is a smarter way to arrive to it) */
 QDockWidget > QFrame {
     background-color: #3C3C3C;
-    border: 1px solid #333333;
+
+    border: 6px solid #3c3c3c;
 }
 
 
@@ -523,12 +524,12 @@ QTabWidget::pane:right {
 
 QTabWidget::tab-bar:top,
 QTabWidget::tab-bar:bottom {
-    left: 10px;
+    left: 6px;
 }
 
 QTabWidget::tab-bar:left,
 QTabWidget::tab-bar:right {
-    top: 10px;
+    top: 6px;
 }
 
 QTabBar {
@@ -551,7 +552,7 @@ QDialog QTabBar {
 QTabBar::tab {
     background-color: #3c3c3c; /* was transparent */
     border: 1px solid transparent;
-    padding: 3px;
+    padding: 3px 12px;
 }
 
 QTabBar::tab:top,
@@ -559,8 +560,8 @@ QTabBar::tab:bottom {
     border-top-width: 4px; /* same as selected tab colored border in order to center close-button */
     border-bottom-width: 4px; /* same as selected tab colored border in order to center close-button */
     min-width: 11ex;
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 QTabBar::tab:left,
@@ -568,8 +569,8 @@ QTabBar::tab:right {
     border-left-width: 4px; /* same as selected tab colored border in order to center close-button */
     border-right-width: 4px; /* same as selected tab colored border in order to center close-button */
     min-height: 14ex;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 QTabBar::tab:selected {
@@ -1050,8 +1051,8 @@ QPlainTextEdit:focus {
     background-color: #3C3C3C; /* Python Console */
     selection-color: #f5f5f5;
     selection-background-color: #557BB6;
-    border: 4px solid #333333;
-    border-radius: 1px;
+    border: 6px solid #333333;
+    border-radius: 0px;
     margin: 0px;
     padding: 1px;
 }
@@ -1225,8 +1226,8 @@ QTextEdit:!editable,
 QTextEdit:!editable:focus {
     color: #f5f5f5;
     background-color: #3C3C3C;
-    border: 4px solid #333333;
-    border-radius: 1px;
+    border: 6px  solid #333333;
+    border-radius: 0px;
     margin: 0px;
     padding: 1px;
 }
@@ -1637,13 +1638,13 @@ Radio button
 ==================================================================================================*/
 QRadioButton::indicator:unchecked{
     color: black;
-    background-color: rgba(0,0,0,40);
-    border: 1px solid #3C3C3C;
+    background-color: #696969;
+    border: 1px solid #2a2a2a;
 }
 
 QRadioButton::indicator:checked {
-    background-color: #696969; /* QCheckBox has the same color */
-    border: 1px solid #696969; /* QCheckBox has the same color */
+    background-color: #557BB6; /* QCheckBox has the same color */
+    border: 1px solid #2a2a2a; /* QCheckBox has the same color */
     image:url(qss:images_dark-light/radiobutton_light.svg);
 }
 
@@ -1660,13 +1661,13 @@ QRadioButton:disabled {
 }
 
 QRadioButton::indicator {
-    width: 11px;
-    height: 11px;
+    width: 12px;
+    height: 12px;
     border-radius: 2px;
 }
 
 QRadioButton::indicator:pressed {
-    border-color: #cbd8e6;
+    border-color: #696969;
 }
 
 QRadioButton::indicator:disabled {
@@ -1695,11 +1696,11 @@ QCheckBox:disabled {
 QCheckBox::indicator,
 QGroupBox::indicator {
     color: black;
-    background-color: rgba(0,0,0,40);
-    border: 1px solid #3C3C3C;
-    width: 11px;
-    height: 11px;
-    border-radius:0px;
+    background-color: #696969;
+    border: 1px solid #2a2a2a;
+    width: 12px;
+    height: 12px;
+    border-radius:1px;
 }
 
 QCheckBox::indicator:pressed,
@@ -1710,13 +1711,13 @@ QGroupBox::indicator:pressed,
 QGroupBox::indicator:non-exclusive:checked:pressed,
 QGroupBox::indicator:indeterminate:pressed,
 QGroupBox::indicator:checked:pressed {
-    border-color: #cbd8e6;
+    border-color: #696969;
 }
 
 QCheckBox::indicator:checked,
 QGroupBox::indicator:checked {
-    background-color: #696969; /* QRadioButton has the same color */
-    border: 1px solid #696969; /* QRadioButton has the same color */
+    background-color: #557BB6; /* QRadioButton has the same color */
+    border: 1px solid #2a2a2a; /* QRadioButton has the same color */
     image:url(qss:images_dark-light/checkbox_light.svg);
 }
 
@@ -1825,8 +1826,8 @@ QSlider:vertical {
 }
 
 QSlider::groove {
-    background-color: rgba(255,255,255,30);
-    border: 1px solid rgba(255,255,255,40);
+    background-color: #696969;
+    border: 1px solid 32a2a2a;
     border-radius: 2px;
     margin: 4px 0px;
 }
@@ -1841,16 +1842,16 @@ QSlider::groove:vertical {
 
 QSlider::groove:horizontal:disabled,
 QSlider::groove:vertical:disabled {
-    border-color:  #424242;
-    background-color: #424242;
+    border-color:  #2a2a2a;
+    background-color: #696969;
 }
 
 QSlider::handle:horizontal,
 QSlider::handle:vertical {
-    background-color: #2a2a2a;
+    background-color: #557BB6;
     border: 1px solid #2a2a2a;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     border-radius: 2px;
 }
 
@@ -1867,7 +1868,7 @@ QSlider::handle:vertical:hover,
 QSlider::handle:horizontal:pressed,
 QSlider::handle:vertical:pressed {
     border-color: #adc5ed;
-    background-color: #696969;
+    background-color: #557BB6;
 }
 
 QSlider::handle:horizontal:disabled,
