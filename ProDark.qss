@@ -128,6 +128,15 @@ QToolBox::tab:hover
 }
 
 /*==================================================================================================
+QStatusBar
+==================================================================================================*/
+
+QStatusBar::item {
+    border: 1px solid #333333;
+    border-radius: 0px;
+}
+
+/*==================================================================================================
 MENUS
 ==================================================================================================*/
 QMenuBar,
@@ -347,7 +356,7 @@ QDockWidget::float-button:pressed {
 QDockWidget > QFrame {
     background-color: #3C3C3C;
 
-    border: 6px solid #3c3c3c;
+    border: 6px solid #333333;
 }
 
 
@@ -384,19 +393,19 @@ QAbstractScrollArea::corner {
 }
 
 QScrollBar:horizontal {
-    background-color: transparent;
+    background-color: #2a2a2a;
     height: 15px;
     margin: 0px;
 }
 
 QScrollBar::handle:vertical,
 QScrollBar::handle:horizontal {
-    background-color: rgba(255,255,255,80);
+    background-color: #696969;
 }
 
 QScrollBar::handle:vertical:hover,
 QScrollBar::handle:horizontal:hover {
-    background-color: rgba(255,255,255,100);
+    background-color: #557BB6;
 }
 
 QScrollBar::handle:horizontal {
@@ -444,13 +453,13 @@ QScrollBar::sub-page:horizontal {
 }
 
 QScrollBar:vertical {
-    background-color: transparent;
+    background-color: #2a2a2a;
     width: 15px;
     margin: 0px;
 }
 
 QScrollBar::handle:vertical {
-    min-height: 5px;
+    min-height: 24px;
     border-radius: 2px;
     margin: 15px 4px;
 }
@@ -498,33 +507,33 @@ QScrollBar::sub-page:vertical {
 Tab bar
 ==================================================================================================*/
 QTabWidget::pane {
-    background-color: transparent; /* temporal (transparent background) */ /* tab content background color */
+    background-color: #333333; /* temporal (transparent background) */ /* tab content background color */ /* was transparent. fixes no color undocked Combo View */
     position: absolute;
 }
 
 QTabWidget::pane:top {
     top: -1px;
-    border-top: 1px solid #3C3C3C;
+    border-top: 1px solid #333333;
 }
 
 QTabWidget::pane:bottom {
     bottom: -1px;
-    border-bottom: 1px solid #3C3C3C;
+    border-bottom: 1px solid #33333C;
 }
 
 QTabWidget::pane:left {
     right: -1px;
-    border-right: 1px solid #3C3C3C;
+    border-right: 1px solid #333333;
 }
 
 QTabWidget::pane:right {
     left: -1px;
-    border-left: 1px solid #3C3C3C;
+    border-left: 1px solid #333333;
 }
 
 QTabWidget::tab-bar:top,
 QTabWidget::tab-bar:bottom {
-    left: 6px;
+    left: 8px;
 }
 
 QTabWidget::tab-bar:left,
@@ -539,7 +548,7 @@ QTabBar {
 
 /* Workaround for QTabBars created from docked QDockWidgets which don't draw the border if not set and reset as follows: */
 QTabBar {
-    border-top: 1px solid #3C3C3C;  /* set color for all QTabBars */
+    border-top: 1px solid #333333;  /* set color for all QTabBars */
 }
 QDockWidget QTabBar {
     border-color: transparent; /* set color for all QTabBars but ones created from QDockWidget */
@@ -606,7 +615,7 @@ QTabBar::tab:!selected {
 
 QTabBar::tab:!selected:hover {
     color: rgba(255,255,255,180);
-    background-color: rgba(255,255,255,20); /* Hack for Undocked inactive tabs - can also change to #696969 */
+    background-color: #557BB6; /* Hack for Undocked inactive tabs - can also change to #696969 */ /* was rgba(255,255,255,20) */
 }
 
 QTabBar::tab:first:selected {
@@ -641,13 +650,13 @@ QDialog#Gui__Dialog__DlgPreferences > QListView::item {
     border-radius: 2px;
 }
 
-QDialog#Gui__Dialog__DlgPreferences > QListView::item:hover {
+QDialog#Gui__Dialog__DlgPreferences > QListView::item:hover { /* Preference left icons*/
     background-color: #557BB6;
 }
 
-QDialog#Gui__Dialog__DlgPreferences > QListView::item:selected {
+QDialog#Gui__Dialog__DlgPreferences > QListView::item:selected { /* Preference left icons*/
     color: white;
-    background-color: #696969;
+    background-color: #557BB6;
 }
 
 
@@ -759,7 +768,7 @@ QTableView {
     alternate-background-color: #333333; /* related with QListView background  */
     border: 1px solid #333333;
     selection-color: #ffffff;
-    selection-background-color: #696969; /* should be similar to QListView::item selected background-color */
+    selection-background-color: #557BB6; /* should be similar to QListView::item selected background-color */
     show-decoration-selected: 1; /* make the selection span the entire width of the view */
     border-radius: 2px;
 }
@@ -772,7 +781,7 @@ QTreeView::item:hover  {
 QListView::item:selected,
 QTreeView::item:selected  {
     color: #ffffff; /* should be similar to QListView selection-color */
-    background-color: #696969; /* should be similar to QListView selection-background-color */
+    background-color: #557BB6; /* should be similar to QListView selection-background-color */
     show-decoration-selected: 1; /* make the selection span the entire width of the view */
 }
 
@@ -1466,6 +1475,7 @@ QPushButton {
     border-color: #2a2a2a;
     padding: 4px 20px;
     margin: 2px 2px;
+    margin-right: 5px;
     min-height: 20px; /* same as QTabBar QPushButton min-width */
     border-radius: 2px;
 
@@ -1826,8 +1836,8 @@ QSlider:vertical {
 }
 
 QSlider::groove {
-    background-color: #696969;
-    border: 1px solid 32a2a2a;
+    background-color: #2a2a2a;
+    border: 2px solid #3c3c3c;
     border-radius: 2px;
     margin: 4px 0px;
 }
@@ -1842,13 +1852,13 @@ QSlider::groove:vertical {
 
 QSlider::groove:horizontal:disabled,
 QSlider::groove:vertical:disabled {
-    border-color:  #2a2a2a;
-    background-color: #696969;
+    border-color:  #3c3c3c;
+    background-color: #2a2a2a;
 }
 
 QSlider::handle:horizontal,
 QSlider::handle:vertical {
-    background-color: #557BB6;
+    background-color: #696969;
     border: 1px solid #2a2a2a;
     width: 16px;
     height: 16px;
@@ -1873,8 +1883,8 @@ QSlider::handle:vertical:pressed {
 
 QSlider::handle:horizontal:disabled,
 QSlider::handle:vertical:disabled {
-    border-color: #424242;
-    background-color: #424242;
+    border-color: #2a2a2a;
+    background-color: #557BB6;
 }
 
 
@@ -1911,12 +1921,12 @@ QToolBar > QPushButton {
     padding: 4px;
     margin: 0px; /* doesn't work with :left, :right:, :top or :bottom sub-controls */
     min-width: 24px; /* could not be larger due to switchable Preferences "Size of toolbar icons" */
-    min-height: 19px; /* could not be larger due to switchable Preferences "Size of toolbar icons" */
+    min-height: 20px; /* could not be larger due to switchable Preferences "Size of toolbar icons" */
     border-radius: 2px; /* same as regular QPushButton */ 
 }
 
 QToolBar > QPushButton:checked {
-    border: 1px solid #3c3c3c;
+    border: 1px solid #333333;
     background-color: #557BB6;
 }
 
@@ -1937,11 +1947,11 @@ QToolBar > QPushButton:!checked:hover {
 }
 
 QToolBar > QPushButton:checked:pressed {
-    background-color: solid #696969;
+    background-color: solid #557BB6;
 }
 
 QToolBar > QPushButton:!checked:pressed {
-    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #424242, stop:1 #333333);
+    background-color: #557BB6;
 }
 
 QToolBar > QPushButton:checked:disabled,
@@ -1957,11 +1967,11 @@ QToolBar > QToolButton {
 }
 
 QToolBar > QToolButton:hover {
-    background-color: rgba(255,255,255,20);
+    background-color: #557BB6;
 }
 
 QToolBar > QToolButton:pressed {
-    background-color: rgba(255,255,255,30);
+    background-color: #557BB6;
 }
 
 /* ToolBar menu buttons (buttons with drop-down menu) */
@@ -2013,12 +2023,12 @@ QToolBar > QToolButton::menu-arrow:open {
 /* when QToolButton is checked: */
 QToolBar > QToolButton:checked {
     border: 1px solid #557BB6;
-    background-color: rgba(124,171,249,60); /* transparency for #557BB6 color */
+    background-color: #557BB6; /* transparency for #557BB6 color */
 }
 
 QToolBar > QToolButton:checked:hover {
     border: 1px solid #557BB6;
-    background-color: rgba(124,171,249,80); /* transparency for #557BB6 color */
+    background-color: #557BB6; /* transparency for #557BB6 color */
 }
 
 /*The "show more" button  (it can also be stylable with "QToolBarExtension" */
