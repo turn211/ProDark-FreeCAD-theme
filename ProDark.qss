@@ -271,7 +271,7 @@ QToolBar::separator:vertical {
 Group box
 ==================================================================================================*/
 QGroupBox {
-    color: rgba(255,255,255,120);
+    color: #bcbcbc;
     border:1px solid rgba(255,255,255,20); /* lighter than its own border-color */;
     border-radius: 2px;
     margin-top: 10px;
@@ -300,7 +300,7 @@ Tooltip
 ==================================================================================================*/
 QToolTip {
     color: #ffffff;
-    background-color: #1e1e1e;
+    background-color: #2a2a2a;
     /*opacity: 90%; doesn't correctly work */
     padding: 4px;
     border-radius: 2px; /* has no effect */
@@ -366,6 +366,7 @@ Progress bar
 QProgressBar,
 QProgressBar:horizontal {
     color: white;
+    min-height: 24px;
     background-color: rgba(0,0,0,70);
     text-align: center;
     border: 1px solid rgba(0,0,0,140);
@@ -374,7 +375,7 @@ QProgressBar:horizontal {
 }
 QProgressBar::chunk,
 QProgressBar::chunk:horizontal {
-    background-color: qlineargradient(spread:pad, x1:1, y1:0.545, x2:1, y2:0, stop:0 #3874f2, stop:1 #557BB6);
+    background-color: #557BB6;
     border-radius: 2px;
 }
 
@@ -435,11 +436,13 @@ QScrollBar::add-line:horizontal {
 QScrollBar::sub-line:horizontal:hover,
 QScrollBar::sub-line:horizontal:on {
     border-image: url(qss:images_dark-light/left_arrow_lighter.svg);
+    background-color: #557BB6;
 }
 
 QScrollBar::add-line:horizontal:hover,
 QScrollBar::add-line:horizontal:on {
     border-image: url(qss:images_dark-light/right_arrow_lighter.svg);
+    background-color: #557BB6;
 }
 
 QScrollBar::up-arrow:horizontal,
@@ -485,11 +488,13 @@ QScrollBar::add-line:vertical {
 QScrollBar::sub-line:vertical:hover,
 QScrollBar::sub-line:vertical:on {
     border-image: url(qss:images_dark-light/up_arrow_lighter.svg);
+    background-color: #557BB6;
 }
 
 QScrollBar::add-line:vertical:hover,
 QScrollBar::add-line:vertical:on {
     border-image: url(qss:images_dark-light/down_arrow_lighter.svg);
+    background-color: #557BB6;
 }
 
 QScrollBar::up-arrow:vertical,
@@ -642,7 +647,7 @@ QDialog#Gui__Dialog__DlgPreferences QTabWidget::pane {
 
 /* hack to correctly align Preferences icon list on OSX */
 QDialog#Gui__Dialog__DlgPreferences > QListView {
-    min-width: 130px;
+    min-width: 108px; /* narrowed for new smaller icons - was 130px*/
 }
 
 /* unique styles for sections inside Preferences */
@@ -820,8 +825,8 @@ Gui--PropertyEditor--PropertyEditor QAbstractSpinBox:disabled {
 
 /* hack to hide weird redundant information inside cells with links and no editable data (but editable via "..." button) */
 Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel {
-	color: #557BB6;
-	background-color: #696969; /* same as focused background color */
+	color: #949494;
+	background-color: #2a2a2a; /* same as focused background color */
 }
 
 /* hack to disable margin inside Property values to following elements */
@@ -1204,9 +1209,9 @@ QTimeEdit,
 QDateEdit,
 QDateTimeEdit {
     color: #f5f5f5;
-    background-color: #696969;
+    background-color: #3c3c3c;
     selection-color: #ffffff;
-    selection-background-color: #557BB6;
+    selection-background-color: #333333;
     border: 0px solid #2a2a2a;
     border-radius: 2px;
     min-width: 50px; /* it ensures the default value is correctly displayed */
@@ -1255,7 +1260,7 @@ QDateTimeEdit:focus {
     border-color: #3c3c3c;
     border: 1px;
     border-right-color: #557BB6; /* same as up/down or drop-down button color */
-    background-color: #696969;
+    background-color: #557BB6;
 }
 
 QComboBox:disabled,
@@ -1467,15 +1472,83 @@ QComboBox QAbstractItemView {
 /*==================================================================================================
 Push button
 ==================================================================================================*/
+QPushButton#inspectButton {
+    background-color: #2a2a2a;
+    border-bottom: 2px solid #1e1e1e;
+}
+
+QPushButton:focus#inspectButton,
+QPushButton:hover#inspectButton {
+    background-color: #557bb6;
+    border: -2px solid #557bb6;
+}
+
+QPushButton:checked#inspectButton {
+    background-color: #557bb6;
+    border-bottom: solid #557bb6;
+}
+
+QPushButton:pressed#inspectButton {
+    background-color: #557bb6;
+    border-bottom: 1px solid #3c3c3c;
+}
+
+QPushButton#NavigationIndicator {
+    background-color: #557bb6;
+    min-height: 20px;
+    border: 2px solid #557bb6;
+}
+
+QPushButton:hover#NavigationIndicator {
+    border: -2px solid #557bb6;
+}
+
+QPushButton#buttonAddLevel {
+    margin-left:10px;
+}
+
+QPushButton#buttonRename {
+    margin-right:10px;
+}
+
+QPushButton#buttonAddLevel,
+QPushButton#buttonAddProxy,
+QPushButton#buttonDelete,
+QPushButton#buttonToggle,
+QPushButton#buttonIsolate,
+QPushButton#buttonSaveView,
+QPushButton#buttonRename {
+    color: #f5f5f5;
+    text-align: center;
+    min-width: 16px;
+    min-height: 24px;
+    padding: 4px 8px;
+    padding-bottom: 4px;
+    background-color: #333333;
+    border: 1px #557bb6;  
+}
+
+QPushButton:hover#buttonAddLevel,
+QPushButton:hover#buttonAddProxy,
+QPushButton:hover#buttonDelete,
+QPushButton:hover#buttonToggle,
+QPushButton:hover#buttonIsolate,
+QPushButton:hover#buttonSaveView,
+QPushButton:hover#buttonRename {
+    color: #cbd8e6;
+    border-color: #3c3c3c;
+    background-color: #557BB6;
+}  
+
 QPushButton {
     color: #e0e0e0;
     text-align: center;
-    background-color: qlineargradient(spread:pad, x1:0, y1:0.3, x2:0, y2:1, stop:0 #696969, stop:1 #696961); /* Middle Mouse Navigation Button and Ok Cancel Apply Help Preferences Buttons */
-    border: 2px;
-    border-color: #2a2a2a;
-    padding: 4px 20px;
-    margin: 2px 2px;
-    margin-right: 5px;
+    min-width: 90px;
+    background-color: #2a2a2a;
+    border: 2px solid #2a2a2a;
+    border-bottom-color: #1e1e1e; /* simulates shadow under the button */
+    padding: 4px 4px;
+    margin: 4px 4px;
     min-height: 20px; /* same as QTabBar QPushButton min-width */
     border-radius: 2px;
 
@@ -1484,24 +1557,25 @@ QPushButton {
 QPushButton:hover,
 QPushButton:focus {
     color: #cbd8e6;
-    border-color: #2a2a2a;
+    border: -2px solid #333333;
     background-color: #557BB6;
 }
 
 QPushButton:disabled,
 QPushButton:disabled:checked {
-    color: #2a2a2a;
-    background-color: #696969; /* same as enabled color */
+    color: #f5f5f5;
+    background-color: #2a2a2a; /* same as enabled color */
     border-color: #2a2a2a; /* same as enabled color */
 }
 
 QPushButton:pressed {
     background-color: #557BB6;
+    border: 1px solid #3c3c3c;
 }
 
 QPushButton:checked {
-    background-color: #696969;
-    border-color: #557BB6;
+    background-color: #557BB6;
+    border: solid #557BB6;
 }
 
 /* Color Buttons */
@@ -2145,11 +2219,11 @@ QTableView > QWidget > QTextEdit:focus,
 QTableView > QWidget > QTimeEdit:focus,
 QTableView > QWidget > QDateEdit:focus,
 QTableView > QWidget > QDateTimeEdit:focus {
-    color: #2a2a2a;
+    color: #f5f5f5;
     selection-color: white;
     selection-background-color: #557BB6;
-    border-color: #cbd8e6;
-    background-color: #cbd8e6;
+    border-color: #3c3c3c;
+    background-color: #3c3c3c;
 }
 
 QTableView > QWidget > QComboBox:disabled,
