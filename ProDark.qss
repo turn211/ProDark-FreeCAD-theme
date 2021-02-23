@@ -87,6 +87,9 @@ Gui--UrlLabel {
 /*==================================================================================================
 Main window
 ==================================================================================================*/
+QWidget {
+    background-color: #333333;
+}
 QMainWindow,
 QDialog,
 QDockWidget,
@@ -328,10 +331,10 @@ QDockWidget {
 
 QDockWidget::title {
     text-align: center;
-    background-color: rgba(0,0,0,40);
-    border: 4px solid #333333; /* fix to simulate margin between this :title and tabs */ /* same as main background color */
-    border-radius: 6px; /* bigger than normal due to previous border fix */
-    padding: 4px 0px; /* also needed because of previous border fix */
+    background-color: #2a2a2a;
+    border-bottom: 4px solid #333333; /* fix to simulate margin between this :title and tabs */ /* same as main background color */
+    margin-left: 7px;
+    margin-right: 7px;
 }
 
 QDockWidget::close-button,
@@ -353,12 +356,13 @@ QDockWidget::float-button {
 
 QDockWidget::close-button:hover,
 QDockWidget::float-button:hover {
-    background-color: rgba(0,0,0,60);
+    background-color: #557bb6;
 }
 
 QDockWidget::close-button:pressed,
 QDockWidget::float-button:pressed {
-    background-color: rgba(0,0,0,120);
+    background-color: #42608d;
+    border: 2px solid #76acfd
 }
 
 /* fix for Python Console (probably there is a smarter way to arrive to it) */
@@ -521,7 +525,7 @@ QScrollBar::sub-page:vertical {
 Tab bar
 ==================================================================================================*/
 QTabWidget::pane {
-    background-color: #333333; /* temporal (transparent background) */ /* tab content background color */ /* was transparent. fixes no color undocked Combo View */
+    background-color: transparent; /* temporal (transparent background) */ /* tab content background color */ /* was transparent. fixes no color undocked Combo View */
     position: absolute;
 }
 
@@ -557,7 +561,7 @@ QTabWidget::tab-bar:right {
 
 QTabBar {
     qproperty-drawBase: 0; /* important */
-    background-color: #333333; /* Hack for Undocked white background - was transparent*/ 
+    background-color: transparent; /* Hack for Undocked white background - was transparent*/ 
 }
 
 /* Workaround for QTabBars created from docked QDockWidgets which don't draw the border if not set and reset as follows: */
@@ -1225,7 +1229,7 @@ QDateTimeEdit {
     border: 0px solid #2a2a2a;
     border-radius: 2px;
     min-width: 50px; /* it ensures the default value is correctly displayed */
-    min-height: 20px; /* important to be a pair number in order to up/down buttons to be divisible by two (if not set could create a blank line in Ubuntu. Its downside is that it's needed to reset it (min-width: 0px) on following elements that can't have it such as fields inside QToolBar and inside QTreeView (Property editor) */
+    min-height: 16px; /* important to be a pair number in order to up/down buttons to be divisible by two (if not set could create a blank line in Ubuntu. Its downside is that it's needed to reset it (min-width: 0px) on following elements that can't have it such as fields inside QToolBar and inside QTreeView (Property editor) */
     padding: 1px 2px; /* temporal: could don't be compatible with elements inside Tree/List view */
 }
 
@@ -1270,7 +1274,7 @@ QDateTimeEdit:focus {
     border-color: #333333;
     border: 1px;
     border-right-color: #557BB6; /* same as up/down or drop-down button color */
-    background-color: #2a2a2a;
+    background-color: #557bb6;
 }
 
 QComboBox:disabled,
@@ -1330,7 +1334,7 @@ QDoubleSpinBox:up-button:focus,
 QTimeEdit:up-button:focus,
 QDateEdit:up-button:focus,
 QDateTimeEdit:up-button:focus {
-    background-color: #557BB6;
+    background-color: #2a2a2a;
 }
 
 QAbstractSpinBox:down-button:focus,
@@ -1339,7 +1343,7 @@ QDoubleSpinBox:down-button:focus,
 QTimeEdit:down-button:focus,
 QDateEdit:down-button:focus,
 QDateTimeEdit:down-button:focus {
-    background-color: #557BB6;
+    background-color: #2a2a2a;
 }
 
 QAbstractSpinBox:up-button:disabled,
@@ -1444,7 +1448,7 @@ QComboBox::drop-down {
 
 QComboBox::drop-down:on,
 QComboBox::drop-down:focus {
-    background-color: #557BB6;
+    background-color: #2a2a2a;
 }
 
 QComboBox::down-arrow {
@@ -1506,7 +1510,7 @@ QPushButton:pressed#inspectButton {
 
 QPushButton#NavigationIndicator {
     background-color: #557bb6;
-    min-height: 20px;
+    min-height: 16px;
     border: 2px solid #557bb6;
 }
 
@@ -1530,13 +1534,11 @@ QPushButton#buttonIsolate,
 QPushButton#buttonSaveView,
 QPushButton#buttonRename {
     color: #f5f5f5;
-    text-align: center;
+
     min-width: 16px;
-    min-height: 24px;
-    padding: 4px 8px;
-    padding-bottom: 4px;
+    padding: 4px;
     background-color: #333333;
-    border: 1px #557bb6;  
+    border: 1px #557bb6; 
 }
 
 QPushButton:hover#buttonAddLevel,
@@ -1555,13 +1557,13 @@ QPushButton {
     color: #e0e0e0;
     text-align: center;
     min-width: 70px;
-    background-color: #2a2a2a;
+    background-color: #2a2a2a; /* Middle Mouse Navigation Button and Ok Cancel Apply Help Preferences Buttons */
     border: 2px solid #2a2a2a;
     border-bottom-color: #1e1e1e; /* simulates shadow under the button */
-    padding: 4px 4px;
-    margin: 4px 4px;
-    min-height: 20px; /* same as QTabBar QPushButton min-width */
-    border-radius: 2px;
+    padding: 2px 2px;
+    margin: 2px 2px;
+    min-height: 16px; /* same as QTabBar QPushButton min-width */
+    border-radius: 1px;
 
 }
 
@@ -2003,10 +2005,10 @@ QToolBar > QDateTimeEdit {
 }
 
 QToolBar > QPushButton {
-    padding: 4px;
+    padding: 2px;
     margin: 0px; /* doesn't work with :left, :right:, :top or :bottom sub-controls */
     min-width: 24px; /* could not be larger due to switchable Preferences "Size of toolbar icons" */
-    min-height: 20px; /* could not be larger due to switchable Preferences "Size of toolbar icons" */
+    min-height: 24px; /* could not be larger due to switchable Preferences "Size of toolbar icons" */
     border-radius: 2px; /* same as regular QPushButton */ 
 }
 
