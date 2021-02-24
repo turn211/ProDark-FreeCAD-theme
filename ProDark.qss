@@ -1225,7 +1225,7 @@ QDateTimeEdit {
     color: #f5f5f5;
     background-color: #494949;  /* lineedits and drop-downs */
     selection-color: #ffffff;
-    selection-background-color: #557bb6;
+    selection-background-color: #2a2a2a;
     border: 0px solid #2a2a2a;
     border-radius: 2px;
     min-width: 50px; /* it ensures the default value is correctly displayed */
