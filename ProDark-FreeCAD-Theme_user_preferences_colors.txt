@@ -1,0 +1,41 @@
+Preferences > General > Editor 
+Text = #d4d4d4
+Bookmark = #00ffff
+Breakpoint = #ff0000
+Keyword = #569cd6
+Comment = #6a9955
+Block Comment = #ce9178
+Number = #b5cea8
+String = #ce9178
+Character = #ff0000
+Class name = #4ec9b0
+Define name = #dcdcaa
+Operator = #d4d4d4
+Python Output = #aaaa7f
+Python error = #fd7c62
+Current line highlight = #e0e0e0
+
+Preference > General > Output window
+Normal Messages = #d4d4d4
+Log messages = #55aaff
+Warnings = #fd7c62
+Errors = #ff0000
+
+Preferences > Display > Colors
+Enable preselection highlighting = #e1e114
+Enable selection highlighting = #1cad1c
+Simple color = #3c3c3c
+Object being edited = #ce9178
+Active container = #ff55ff
+
+Prefences > Start > Start page options
+Background color = #3c3c3c
+Background text color = #fffbf7
+Page background color = #333333
+Page text color = #adadad
+Box background color = #3c3c3c
+Link color = #55aaff
+
+Preferences > Sketcher > Colors
+Reference constraint color = #00aaff
+Coordinate text color = #55aaff
