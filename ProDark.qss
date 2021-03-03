@@ -84,6 +84,7 @@ QLabel[haslink="true"] {
 Gui--UrlLabel {
     color: #55aaff;
 }
+
 /*==================================================================================================
 Main window
 ==================================================================================================*/
@@ -1213,7 +1214,19 @@ QSint--ActionGroup QFrame[class="content"] QTableView {
 Buttons
 ==================================================================================================*/
 /* Common */
-QComboBox,
+QComboBox {
+    color: #f5f5f5;
+    background-color: #2a2a2a;  /* lineedits and drop-downs */
+    selection-color: #ffffff;
+    selection-background-color: #2a2a2a;
+    border: 1px solid #2a2a2a;
+    border-radius: 2px;
+    min-width: 50px; /* it ensures the default value is correctly displayed */
+    min-height: 16px; /* important to be a pair number in order to up/down buttons to be divisible by two (if not set could create a blank line in Ubuntu. Its downside is that it's needed to reset it (min-width: 0px) on following elements that can't have it such as fields inside QToolBar and inside QTreeView (Property editor) */
+    padding: 1px 2px; /* temporal: could don't be compatible with elements inside Tree/List view */
+}
+
+
 QAbstractSpinBox,
 QSpinBox,
 QDoubleSpinBox,
@@ -1534,8 +1547,9 @@ QPushButton#buttonIsolate,
 QPushButton#buttonSaveView,
 QPushButton#buttonRename {
     color: #f5f5f5;
-
+    max-width: 100%;
     min-width: 16px;
+    min-height: 24px;
     padding: 4px;
     background-color: #333333;
     border: 1px #557bb6; 
@@ -1549,7 +1563,6 @@ QPushButton:hover#buttonIsolate,
 QPushButton:hover#buttonSaveView,
 QPushButton:hover#buttonRename {
     color: #cbd8e6;
-    border-color: #3c3c3c;
     background-color: #557BB6;
 }  
 
