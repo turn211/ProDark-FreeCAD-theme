@@ -15,7 +15,7 @@ TBD
 1. Install ProDark.qss into FreeCAD Folder\data\Gui\Stylesheets\ 
 2. Install HighRezMonitor Folder with InitGui.py into C:\Users\UserName\AppData\Roaming\FreeCAD\Mod\
 3. In FreeCAD go to `Edit > Preferences > General` and pick ProDark from Stylesheet, Change Size of toolbar icons: to Medium(24px) and Apply/Ok
-4. To have Startpage and User Colors the same as Screenshots, choose same colors in `Edit > Preferences` as written in the ProDark-FreeCAD-Theme_user_preferences_colors.txt file
+4. To have Startpage and User Colors the same as Screenshots, choose same colors in `Edit > Preferences` as written in the [ProDark-FreeCAD-Theme_user_preferences_colors.txt](https://github.com/turn211/ProDark-FreeCAD-theme/blob/main/ProDark-FreeCAD-Theme_user_preferences_colors.txt) file
 
 ## Discussion
 
