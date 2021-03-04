@@ -1214,9 +1214,9 @@ QSint--ActionGroup QFrame[class="content"] QTableView {
 Buttons
 ==================================================================================================*/
 /* Common */
-QComboBox {
+QToolBar > Gui--WorkbenchComboBox  {
     color: #f5f5f5;
-    background-color: #2a2a2a;  /* lineedits and drop-downs */
+    background-color: #2a2a2a;  /* workbench picker and drop-down */
     selection-color: #ffffff;
     selection-background-color: #2a2a2a;
     border: 1px solid #2a2a2a;
@@ -1226,7 +1226,13 @@ QComboBox {
     padding: 1px 2px; /* temporal: could don't be compatible with elements inside Tree/List view */
 }
 
+QToolBar > Gui--WorkbenchComboBox:!editable {
+    color: #f5f5f5;
+    font-weight: bold;
+    background-color: #557bb6;  /* workbench disabled color */
+}
 
+QComboBox,
 QAbstractSpinBox,
 QSpinBox,
 QDoubleSpinBox,
