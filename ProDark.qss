@@ -340,8 +340,8 @@ QDockWidget::title {
     text-align: center;
     background-color: #2a2a2a;
     border-bottom: 4px solid #333333; /* fix to simulate margin between this :title and tabs */ /* same as main background color */
-    margin-left: 7px;
-    margin-right: 7px;
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
 QDockWidget::close-button,
@@ -375,7 +375,6 @@ QDockWidget::float-button:pressed {
 /* fix for Python Console (probably there is a smarter way to arrive to it) */
 QDockWidget > QFrame {
     background-color: #3c3c3c;
-
     border: 6px solid #333333;
 }
 
@@ -1250,7 +1249,7 @@ QDateTimeEdit {
     color: #f5f5f5;
     background-color: #494949;  /* lineedits and drop-downs */
     selection-color: #ffffff;
-    selection-background-color: #2a2a2a;
+    selection-background-color: #557bb6;
     border: 0px solid #2a2a2a;
     border-radius: 1px;
     min-width: 50px; /* it ensures the default value is correctly displayed */
@@ -1299,7 +1298,7 @@ QDateTimeEdit:focus {
     border-color: #333333;
     border: 1px;
     border-right-color: #557BB6; /* same as up/down or drop-down button color */
-    background-color: #557bb6;
+    background-color: #494949;
 }
 
 QComboBox:disabled,
@@ -1516,8 +1515,8 @@ QPushButton {
     text-align: center;
     background-color: #2a2a2a;
     padding: 4px 20px;
-    border: 1px solid #1e1e1e;
-    margin: 2px;
+    border: 1px solid #494949;
+    margin: 4px 4px;
     border-radius: 1px;
 }
 
@@ -1546,33 +1545,29 @@ QPushButton:checked {
     border: 1px solid #557BB6;
 }
 
-QPushButton#inspectButton {
+/* Inspect Widgets Addon */
+
+QDockWidget#InspectWidgets QPushButton {
     background-color: #2a2a2a;
-    border-bottom: 1px solid #1e1e1e;
+    border: 1px solid #3c3c3c;
     min-height: 16px;
     margin: 0px;
 }
 
-QPushButton:focus#inspectButton,
-QPushButton:hover#inspectButton {
+QDockWidget#InspectWidgets QPushButton:hover {
     color: #ffffff;
     background-color: #557bb6;
     border: 1px solid #f5f5f5;
     border-bottom: 1px solid #f5f5f5;
 }
 
-QPushButton:checked#inspectButton {
+QDockWidget#InspectWidgets QPushButton:checked,
+QDockWidget#InspectWidgets QPushButton:pressed {
     background-color: #557bb6;
     border: 1px solid #557bb6;
-    border-bottom: solid #557bb6;
-
 }
 
-QPushButton:pressed#inspectButton {
-    background-color: #557bb6;
-    border: 1px solid #557bb6;
-    border-bottom: solid #557bb6;
-}
+/* CAD Navigation Style */
 
 QPushButton#NavigationIndicator {
     background-color: #557bb6;
@@ -1595,13 +1590,9 @@ QPushButton:pressed#NavigationIndicator {
     border: 1px solid #557bb6;
 }
 
-QPushButton#buttonAddLevel,
-QPushButton#buttonAddProxy,
-QPushButton#buttonDelete,
-QPushButton#buttonToggle,
-QPushButton#buttonIsolate,
-QPushButton#buttonSaveView,
-QPushButton#buttonRename {
+/* BIM Views Manager */
+
+QWidget#Form QPushButton {
     background-color: #333333;
     padding: 4px 2px;
     border: 1px solid #3c3c3c;
@@ -1613,40 +1604,22 @@ QPushButton#buttonRename {
     min-height: 24px;
 }
 
-QPushButton#buttonAddLevel {
-    margin-left: 10px;
-}
-
-QPushButton#buttonRename {
-    margin-right: 10px;
-}
-
-QPushButton:hover#buttonAddLevel,
-QPushButton:hover#buttonAddProxy,
-QPushButton:hover#buttonDelete,
-QPushButton:hover#buttonToggle,
-QPushButton:hover#buttonIsolate,
-QPushButton:hover#buttonSaveView,
-QPushButton:hover#buttonRename {
+QWidget#Form QPushButton:hover {
     border: 1px solid #f5f5f5;
     background-color: #557BB6;
-}  
+}
 
-QPushButton:pressed#buttonAddLevel,
-QPushButton:pressed#buttonAddProxy,
-QPushButton:pressed#buttonDelete,
-QPushButton:pressed#buttonToggle,
-QPushButton:pressed#buttonIsolate,
-QPushButton:pressed#buttonSaveView,
-QPushButton:pressed#buttonRename {
+QWidget#Form QPushButton:pressed {
     border: 1px solid #557bb6;
     background-color: #557BB6;
-}  
+}
+
+/* Sketcher Manual Update Button */
 
 QPushButton#manualUpdate {
     padding: 4px;
     margin: 0px;
-    border: 1px solid #f5f5f5;
+    border: 1px solid #494949;
 }
 
 QPushButton:pressed#manualUpdate {
@@ -1655,19 +1628,15 @@ QPushButton:pressed#manualUpdate {
     background-color: #48699a;
 }
 
-QPushButton#buttonUninstall,
-QPushButton#buttonInstall,
-QPushButton#buttonUpdateAll,
-QPushButton#buttonClose {
+/* Addon Manager */
+
+QDialog#Dialog QPushButton {
     padding: 4px;
     margin: 0px;
-    border: 1px solid #f5f5f5;
+    border: 1px solid #494949;
 }
 
-QPushButton:pressed#buttonUninstall,
-QPushButton:pressed#buttonInstall,
-QPushButton:pressed#buttonUpdateAll,
-QPushButton:pressed#buttonClose {
+QDialog#Dialog QPushButton:hover {
     color: #ffffff;
     border: 1px solid #3c3c3c;
     background-color: #48699a;
@@ -1681,15 +1650,16 @@ QPushButton#buttonClose {
     margin-right: 8px;
 }
 
+/* Ok Cancel Apply Help Preferences Buttons */ /* Hack to move Help button left */
+
 QDialogButtonBox > QPushButton {
     color: #e0e0e0;
     text-align: center;
-    background-color: #2a2a2a; /* Ok Cancel Apply Help Preferences Buttons */
-    border: 1px solid #f5f5f5;
+    background-color: #2a2a2a;
+    border: 1px solid #494949;
     padding: 4px;
-    margin: 4px;
-    width: 60px;
-    min-height: 16px; /* same as QTabBar QPushButton min-width */
+    margin-right: 8px;
+    min-width: 60px;
 }
 
 /* Color Buttons */
@@ -1739,44 +1709,40 @@ Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QWidget > QWidget > QF
     padding: 2px 6px;
 }
 
-QPushButton:checked {
-    background-color: #3c3c3c;
-    border-color: #3c3c3c;
-}
-
-
 /*==================================================================================================
 Tool button inside QDialogs that works as QPushButtons
 ==================================================================================================*/
 /* found under Tools -> Customize -> Macros -> Pixmap "..." button */
+
 QDialog QToolButton {
     color: #e0e0e0;
     text-align: center;
-    background-color: qlineargradient(spread:pad, x1:0, y1:0.3, x2:0, y2:1, stop:0 #2a2a2a, stop:1 #1e1e1e);
-    border: 1px solid #1e1e1e;
-    border-bottom-color: black; /* simulates shadow under the button */
+    background-color: #2a2a2a;
+    border: 1px solid #494949;
     padding: 0px; /* different than regular QPushButton */
-    margin: 2px; /* different than regular QPushButton */
+    margin: 2px;
     min-height: 16px; /* same as QTabBar QPushButton min-width */
     border-radius: 1px;
 }
 
 QDialog QToolButton:hover,
 QDialog QToolButton:focus {
-    color: #cbd8e6;
-    border-color: #557BB6;
-    background-color: #557BB6;
+    color: #ffffff;
+    background-color: #557bb6;
+    border: 1px solid #f5f5f5;
 }
 
 QDialog QToolButton:disabled,
 QDialog QToolButton:disabled:checked {
-    color: #333333;
-    border-color: #424242;
-    background-color: #424242;
+    color: #f5f5f5;
+    background-color: #2a2a2a; 
+    border: 1px solid #2a2a2a; 
 }
 
 QDialog QToolButton:pressed {
-    background-color: #557BB6;
+    color: #ffffff;
+    background-color: #48699a;
+    border: 1px solid #3c3c3c;
 }
 
 
